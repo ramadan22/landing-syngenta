@@ -10,13 +10,13 @@
     <script>
         function slideShow(){
             var current = $('#slider .show');
-            var next = current.next().length ? 
+            var next = current.next().length ?
             current.next() :
             current.siblings().first();
             current.hide().removeClass('show');
             next.fadeIn("slow").addClass('show');
             setTimeout(slideShow, 5000);
-            
+
         };
 
         $(document).ready(function(){
@@ -27,22 +27,22 @@
             // });
 
             $( window ).scroll(function() {
-                if($(window).scrollTop() >= $(".section-animation-1").offset().top - ($(".section-animation-1").outerHeight()/2) - ($(".section-animation-1").height()*2)) 
+                if($(window).scrollTop() >= $(".section-animation-1").offset().top - ($(".section-animation-1").outerHeight()/2) - ($(".section-animation-1").height()*2))
                  $(".section-animation-1 .hide-animation").addClass("show");
             });
 
             $( window ).scroll(function() {
-                if($(window).scrollTop() >= $(".section-animation-2").offset().top - ($(".section-animation-2").outerHeight()/2) - ($(".section-animation-2").height()*2)) 
+                if($(window).scrollTop() >= $(".section-animation-2").offset().top - ($(".section-animation-2").outerHeight()/2) - ($(".section-animation-2").height()*2))
                  $(".section-animation-2 .hide-animation").addClass("show");
             });
-            
+
             $( window ).scroll(function() {
-                if($(window).scrollTop() >= $(".section-animation-left").offset().top - ($(".section-animation-left").outerHeight()/2) - ($(".section-animation-left").height()/2)) 
+                if($(window).scrollTop() >= $(".section-animation-left").offset().top - ($(".section-animation-left").outerHeight()/2) - ($(".section-animation-left").height()/2))
                  $(".section-animation-left").addClass("show");
             });
 
             $( window ).scroll(function() {
-                if($(window).scrollTop() >= $(".section-animation-right").offset().top - ($(".section-animation-right").outerHeight()/2) - ($(".section-animation-right").height()/2)) 
+                if($(window).scrollTop() >= $(".section-animation-right").offset().top - ($(".section-animation-right").outerHeight()/2) - ($(".section-animation-right").height()/2))
                  $(".section-animation-right").addClass("show");
             });
 
@@ -86,16 +86,16 @@
                     processData: false,
                     contentType: false,
                     success: function(d) {
-                        
+
                     },
                     error: function(xhr) {
-                       
+
                     },
                     beforeSend: function () {
-                        
+
                     },
                     complete: function () {
-                        
+
                     }
                 });
                 return false;
@@ -139,7 +139,7 @@
             opacity: 1;
             left: 0;
         }
-        
+
         .section-animation-right.show {
             opacity: 1;
             right: 0;
@@ -149,7 +149,7 @@
             opacity: 1;
             left: 0;
         }
-        
+
         .hide-animation-right.show {
             opacity: 1;
             right: 0;
@@ -317,48 +317,48 @@
             <div class="lg:w-1/2 w-full hide-animation-left">
                 <h1 class="lg:text-5xl sm:text-4xl text-2xl leading-tight font-bold" style="color: #ae1b51;">Atasi Ulat, <br class="md:block hidden" />Hasil Panen Terjaga</h1>
                 <div class="lg:w-3/4 w-full opacity-90 py-8 lg:px-8 px-5 rounded mt-6" style="background-color: #e9eccab3;">
-                    <form class="form-submit">
-                        <input name="nama_lengkap" class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="Nama Lengkap" />
-                        <input name="no_hp" class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="No. Handphone" />
-                        <select class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" name="province">
-                            <option disabled value="">---- Silahkan Pilih ----</option>
-                            <option value="Aceh - Banda Aceh">Aceh - Banda Aceh</option>
-                            <option value="Sumatera Selatan - Medan">Sumatera Selatan - Medan</option>
-                            <option value="Sumatera Barat - Padang">Sumatera Barat - Padang</option>
-                            <option value="Riau - Pekanbaru">Riau - Pekanbaru</option>
-                            <option value="Kepulauan Riau - Tanjung Pinang">Kepulauan Riau - Tanjung Pinang</option>
-                            <option value="Jambi - Jambi">Jambi - Jambi</option>
-                            <option value="Bengkulu - Bengkuli">Bengkulu - Bengkuli</option>
-                            <option value="Sumatera Selatan - Palembang">Sumatera Selatan - Palembang</option>
-                            <option value="Kep. Bangka Belitung - Pangkalpinang">Kep. Bangka Belitung - Pangkalpinang</option>
-                            <option value="Lampung - Banda Lampung">Lampung - Banda Lampung</option>
-                            <option value="Banten - Serang">Banten - Serang</option>
-                            <option value="Jawa Barat - Bandung">Jawa Barat - Bandung</option>
-                            <option value="DKI Jakarta - Jakarta">DKI Jakarta - Jakarta</option>
-                            <option value="Jawa Tengah - Semarang">Jawa Tengah - Semarang</option>
-                            <option value="DI Yogyakarta - Yogyakarta">DI Yogyakarta - Yogyakarta</option>
-                            <option value="Jawa Timur - Surabaya">Jawa Timur - Surabaya</option>
-                            <option value="Bali - Denpasar">Bali - Denpasar</option>
-                            <option value="Nusa Tenggara Barat - Mataram">Nusa Tenggara Barat - Mataram</option>
-                            <option value="Nusa Tenggara Timur - Kupang">Nusa Tenggara Timur - Kupang</option>
-                            <option value="Kalimantan Utara - Tanjungselor">Kalimantan Utara - Tanjungselor</option>
-                            <option value="Kalimantan Barat - Pontianak">Kalimantan Barat - Pontianak</option>
-                            <option value="Kalimantan Tengah - Pangkal Raya">Kalimantan Tengah - Pangkal Raya</option>
-                            <option value="Kalimantan Selatan - Banjarmasin">Kalimantan Selatan - Banjarmasin</option>
-                            <option value="Kalimantan Timur - Samarinda">Kalimantan Timur - Samarinda</option>
-                            <option value="Gorontalo - Gorontalo">Gorontalo - Gorontalo</option>
-                            <option value="Sulawesi Utara - Manado">Sulawesi Utara - Manado</option>
-                            <option value="Sulawesi Barat - Pontianak">Sulawesi Barat - Pontianak</option>
-                            <option value="Sulawesi Tengah - Palu">Sulawesi Tengah - Palu</option>
-                            <option value="Sulawesi Selatan - Makasar">Sulawesi Selatan - Makasar</option>
-                            <option value="Sulawesi Tenggara - Kendari">Sulawesi Tenggara - Kendari</option>
-                            <option value="Maluku Utara - Sofifi">Maluku Utara - Sofifi</option>
-                            <option value="Maluku - Ambon">Maluku - Ambon</option>
-                            <option value="Papua Barat - Manokwari">Papua Barat - Manokwari</option>
-                            <option value="Papua - Jayapura">Papua - Jayapura</option>
+                    <form class="form-submit" name="form-contact" onsubmit="contact(this)">
+                        <input name="nama_lengkap" required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="Nama Lengkap" />
+                        <input name="no_hp" required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="No. Handphone" />
+                        <select required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" name="province">
+                            <option disabled selected value="">---- Silahkan Pilih ----</option>
+                            <option value="Aceh">Aceh</option>
+                            <option value="Sumatera Selatan">Sumatera Selatan</option>
+                            <option value="Sumatera Barat">Sumatera Barat</option>
+                            <option value="Riau">Riau</option>
+                            <option value="Kepulauan Riau">Kepulauan Riau</option>
+                            <option value="Jambi">Jambi</option>
+                            <option value="Bengkulu">Bengkulu</option>
+                            <option value="Sumatera Selatan">Sumatera Selatan</option>
+                            <option value="Kep. Bangka Belitung">Kep. Bangka Belitung</option>
+                            <option value="Lampung">Lampung</option>
+                            <option value="Banten">Banten</option>
+                            <option value="Jawa Barat">Jawa Barat</option>
+                            <option value="DKI Jakarta">DKI Jakarta</option>
+                            <option value="Jawa Tengah">Jawa Tengah</option>
+                            <option value="DI Yogyakarta">DI Yogyakarta</option>
+                            <option value="Jawa Timur">Jawa Timur</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                            <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                            <option value="Kalimantan Utara">Kalimantan Utara</option>
+                            <option value="Kalimantan Barat">Kalimantan Barat</option>
+                            <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                            <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                            <option value="Kalimantan Timur">Kalimantan Timur</option>
+                            <option value="Gorontalo">Gorontalo</option>
+                            <option value="Sulawesi Utara">Sulawesi Utara</option>
+                            <option value="Sulawesi Barat">Sulawesi Barat</option>
+                            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                            <option value="Sulawesi Tenggara">Sulawesi Tenggara</option>
+                            <option value="Maluku Utara">Maluku Utara</option>
+                            <option value="Maluku">Maluku</option>
+                            <option value="Papua Barat">Papua Barat</option>
+                            <option value="Papua">Papua</option>
                         </select>
                         <div></div>
-                        <button type="submit" class="py-1 px-10 mb-5 text-white rounded-full focus:outline-none" style="background-color: #b33260;">Klik disini</button>
+                        <button name="btn-submit" type="submit" class="py-1 px-10 mb-5 text-white rounded-full focus:outline-none" style="background-color: #b33260;">Klik disini</button>
                     </form>
                     <p class="text-left sm:text-base text-sm">
                         Dengan mengklik, Anda setuju dengan<br />
@@ -392,13 +392,13 @@
                     </p>
                 </div>
                 <div class="md:w-1/3 w-full flex flex-wrap mx-auto text-center lg:px-8 md:px-2 px-4 md:mb-0 mb-5">
-                    <img style="filter:invert(1);" src="public/icons/icons8-caterpillar-50.png" class="mx-auto hide-animation md:w-32 sm:w-24 w-16" />
+                    <img style="filter:invert(1);" src="public/icons/caterpillar.svg" class="mx-auto hide-animation md:w-32 sm:w-24 w-16" />
                     <p class="w-full font-bold md:text-black text-white lg:text-xl md:text-base sm:text-lg text-sm md:mt-10 mt-3 mb-10 hide-animation">
                       Pengamatan Serangan ulat pada tanaman dan buah
                     </p>
                 </div>
                 <div class="md:w-1/3 w-full flex flex-wrap mx-auto text-center lg:px-8 md:px-2 px-4 md:mb-0 mb-5">
-                    <img style="filter:invert(1);" src="public/icons/icons8-tomato-80.png" class="mx-auto hide-animation md:w-32 sm:w-24 w-16" />
+                    <img style="filter:invert(1);" src="public/icons/tomato.svg" class="mx-auto hide-animation md:w-32 sm:w-24 w-16" />
                     <p class="w-full font-bold md:text-black text-white lg:text-xl md:text-base sm:text-lg text-sm md:mt-10 mt-3 mb-10 hide-animation">
                       Solusi Syngenta dalam menjaga kualitas buah
                     </p>
@@ -421,13 +421,13 @@
                     </p>
                 </div>
                 <div class="md:w-1/3 w-full flex flex-wrap mx-auto text-center lg:px-8 md:px-2 px-4 md:mb-0 mb-5">
-                    <img style="filter:invert(1);" src="public/icons/icons8-caterpillar-50.png" class="mx-auto hide-animation md:w-32 sm:w-24 w-16" />
+                    <img style="filter:invert(1);" src="public/icons/caterpillar.svg" class="mx-auto hide-animation md:w-32 sm:w-24 w-16" />
                     <p class="w-full font-bold md:text-black text-white lg:text-xl md:text-base sm:text-lg text-sm md:mt-10 mt-3 mb-10 hide-animation">
                       Lakukan pengamatan untuk identifikasi serangan ulat dengan 3T
                     </p>
                 </div>
                 <div class="md:w-1/3 w-full flex flex-wrap mx-auto text-center lg:px-8 md:px-2 px-4 md:mb-0 mb-5">
-                    <img style="filter:invert(1);" src="public/icons/icons8-corn-100.png" class="mx-auto hide-animation md:w-32 sm:w-24 w-16" />
+                    <img style="filter:invert(1);" src="public/icons/corn.svg" class="mx-auto hide-animation md:w-32 sm:w-24 w-16" />
                     <p class="w-full font-bold md:text-black text-white lg:text-xl md:text-base sm:text-lg text-sm md:mt-10 mt-3 mb-10 hide-animation">
                       Solusi Syngenta dalam melindungi tanaman dan hasil panen
                     </p>
@@ -458,7 +458,7 @@
             <div class="flex flex-wrap items-center px-5 md:mt-16 sm:mt-10 mt-6">
                 <div class="md:w-3/5 w-full lg:px-32 md:px-10 px-0">
                     <h1 class="lg:text-4xl md:text-2xl text-xl mb-5 leading-tight mt-0">Dampak Serangan Ulat Grayak FAW</h1>
-                    <h2 class="lg:text-3xl md:text-lg text-base md:mb-10 mb-5" style="font-style:italic;">(SpondSpodoptera frugiperda)</h2>
+                    <h2 class="lg:text-3xl md:text-lg text-base md:mb-10 mb-5" style="font-style:italic;">(Spodoptera frugiperda)</h2>
                     <p class="lg:text-2xl md:text-base text-sm mb-1">&bull; Pucuk dan daun rusak/mati</p>
                     <p class="lg:text-2xl md:text-base text-sm mb-1">&bull; Bunga tidak terbentuk</p>
                     <p class="lg:text-2xl md:text-base text-sm mb-1">&bull; Bisa menyebabkan gagal panen</p>
@@ -591,5 +591,6 @@
             </a>
         </div>
     </footer>
+    <script src="public/form.js" charset="utf-8"></script>
 </body>
 </html>
