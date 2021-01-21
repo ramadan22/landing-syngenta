@@ -125,17 +125,26 @@
             scroll-behavior: smooth;
         }
 
+        .slick-slide {
+            height: 800px;
+        }
+
+        .slick-slide img {
+            height: 800px;
+            object-fit: cover;
+        }
+
         .slick-dots li button:before {
             width: 13px;
             height: 13px;
-            background-color: #dde2f2;
+            background-color: #7d94dd;
             border-radius: 50%;
             content: "";
         } 
 
         .hide-animation-left {
             opacity: 0;
-            position: relative;
+            /* position: relative; */
             left: -150px;
             transition: opacity 1s, left 1s;
         }
@@ -229,10 +238,10 @@
         }
 
         @media screen and (max-width: 1024px){
-            .bg-responsive {
+            /* .bg-responsive {
                 background-size: cover !important;
                 padding-top: 130px !important;
-            }
+            } */
 
             .clear-m-top {
                 margin-top: 0px !important;
@@ -271,6 +280,15 @@
 
             .nav-link {
                 color: #a88e8e;
+            }
+
+            .slick-slide {
+                height: 650px;
+            }
+
+            .slick-slide img {
+                height: 650px;
+                object-fit: cover;
             }
         }
 
@@ -347,10 +365,16 @@
         </nav>
         <!-- END Global navigation -->
     </header>
-    <section class="bg-cover bg-no-repeat flex flex-wrap lg:px-12 px-5 pb-16 bg-responsive" style="background-attachment: fixed; padding-top: 180px; background-image: url('public/images/banner-header.jpg'); background-size: 100% auto;">
+    <!-- <section class="bg-cover bg-no-repeat flex flex-wrap lg:px-12 px-5 pb-16 bg-responsive" style="background-attachment: fixed; padding-top: 180px; background-image: url('public/images/banner-header.jpg'); background-size: 100% auto;"> -->
+    <section class="bg-cover bg-no-repeat flex flex-wrap lg:pb-16 sm:pb-10 pb-5 bg-responsive">
     <!-- <section class="bg-cover bg-no-repeat flex flex-wrap lg:px-12 px-5 pb-16 bg-responsive relative" style="padding-top: 180px;"> -->
-        <div class="w-full md:flex md:items-center md:justify-between">
-            <div class="lg:w-1/2 w-full hide-animation-left">
+        <!-- <div class="w-full md:flex md:items-center md:justify-between relative"> -->
+        <div class="w-full relative">
+            <div class="w-full" id="slider">
+                <img src="public/images/banner-header.jpg" />
+                <img src="public/images/P1050585.jpg" />
+            </div>
+            <div class="lg:w-3/5 md:w-4/6 w-full hide-animation-left absolute left-0 top-0 lg:mt-52 mt-40 sm:px-12 px-5">
                 <h1 class="lg:text-5xl sm:text-4xl text-2xl leading-tight font-bold" style="color: #ae1b51;">Atasi Ulat, <br class="md:block hidden" />Hasil Panen Terjaga</h1>
                 <div class="lg:w-3/4 w-full opacity-90 py-8 lg:px-8 px-5 rounded mt-6" style="background-color: #e9eccab3;">
                     <form class="form-submit" name="form-contact" onsubmit="contact(this)">
@@ -403,12 +427,12 @@
                     </p>
                 </div>
             </div>
-            <div class="lg:w-1/2 w-full lg:px-20 md:px-10 px-5 md:pt-0 pt-10 flex justify-center">
-                <div class="w-2/4" id="slider">
+            <!-- <div class="lg:w-1/2 w-full lg:px-20 md:px-10 px-5 md:pt-0 pt-10 flex justify-center hidden">
+                <div class="w-2/4">
                     <img src="public/images/hex-tomato.png" class="lg:w-2/3 md:w-3/4 sm:w-2/3 w-full mx-auto show" />
                     <img src="public/images/hex-header-2.png" class="lg:w-2/3 md:w-3/4 sm:w-2/3 w-full mx-auto" />
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <main class="relative overflow-hidden">
