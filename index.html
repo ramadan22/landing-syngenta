@@ -137,7 +137,7 @@
             background-color: #7d94dd;
             border-radius: 50%;
             content: "";
-        } 
+        }
 
         .hide-animation-left {
             opacity: 0;
@@ -370,9 +370,9 @@
             <div class="lg:w-3/5 md:w-4/6 w-full hide-animation-left absolute left-0 top-0 lg:mt-52 mt-40 sm:px-12 px-5">
                 <h1 class="lg:text-5xl sm:text-4xl text-2xl leading-tight font-bold" style="color: #ae1b51;">Atasi Ulat, <br class="md:block hidden" />Hasil Panen Terjaga</h1>
                 <div class="lg:w-3/4 w-full opacity-90 py-8 lg:px-8 px-5 rounded mt-6" style="background-color: #e9eccab3;">
-                    <form class="form-submit" name="form-contact" onsubmit="contact(this)">
-                        <input name="nama_lengkap" required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="Nama Lengkap" />
-                        <input name="no_hp" required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="No. Handphone" />
+                    <form class="form-submit" name="form-contact">
+                        <input name="full_name" required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="Nama Lengkap" />
+                        <input name="phone_number" required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="No. Handphone" />
                         <select required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" name="province">
                             <option disabled selected value="">---- Silahkan Pilih ----</option>
                             <option value="Aceh">Aceh</option>
@@ -411,7 +411,7 @@
                             <option value="Papua">Papua</option>
                         </select>
                         <div></div>
-                        <button name="btn-submit" type="submit" class="py-1 px-10 mb-5 text-white rounded-full focus:outline-none" style="background-color: #b33260;">Klik disini</button>
+                        <button name="btn-submit" type="submit" onclick="contact()" class="py-1 px-10 mb-5 text-white rounded-full focus:outline-none" style="background-color: #b33260;">Klik disini</button>
                     </form>
                     <p class="text-left sm:text-base text-sm">
                         Dengan mengklik, Anda setuju dengan<br />
