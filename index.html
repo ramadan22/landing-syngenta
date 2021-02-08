@@ -93,32 +93,6 @@
                 $(".open-nav").show();
                 $(".navbar-fixed-top").removeClass("active");
             });
-
-            $(".form-submit").submit(function(){
-                var form = $('.form-submit')[0];
-                var formData = new FormData(form);
-                $.ajax({
-                    url: "URL",
-                    type: 'POST',
-                    dataType: 'json',
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success: function(d) {
-
-                    },
-                    error: function(xhr) {
-
-                    },
-                    beforeSend: function () {
-
-                    },
-                    complete: function () {
-
-                    }
-                });
-                return false;
-            });
         });
     </script>
     <style>
@@ -372,7 +346,7 @@
                 <div class="lg:w-3/4 w-full opacity-90 py-8 lg:px-8 px-5 rounded mt-6" style="background-color: #e9eccab3;">
                     <form class="form-submit" name="form-contact">
                         <input name="full_name" required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="Nama Lengkap" />
-                        <input name="phone_number" required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="text" placeholder="No. Handphone" />
+                        <input name="phone_number" required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" type="number" placeholder="No. Handphone" />
                         <select required class="w-full mb-4 rounded px-3 py-2" style="background-color: #ffffff;" name="province">
                             <option disabled selected value="">---- Silahkan Pilih ----</option>
                             <option value="Aceh">Aceh</option>
@@ -411,7 +385,7 @@
                             <option value="Papua">Papua</option>
                         </select>
                         <div></div>
-                        <button name="btn-submit" type="submit" onclick="contact()" class="py-1 px-10 mb-5 text-white rounded-full focus:outline-none" style="background-color: #b33260;">Klik disini</button>
+                        <button name="btn-submit" type="button" onclick="contact()" class="py-1 px-10 mb-5 text-white rounded-full focus:outline-none" style="background-color: #b33260;">Klik disini</button>
                     </form>
                     <p class="text-left sm:text-base text-sm">
                         Dengan mengklik, Anda setuju dengan<br />
